@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://45lgi0gaa20o"]
+
+[ext_resource type="Script" path="res://scripts/Obstacle.gd" id="1_on7rk"]
+
+[node name="Obstacle" type="StaticBody2D"]
+position = Vector2(381, 265)
+script = ExtResource("1_on7rk")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.687215, 0.687215, 0.687215, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-8, -9)
