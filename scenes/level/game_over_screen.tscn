@@ -19,7 +19,7 @@ scale = Vector2(2, 2)
 text = "Final Score : 0"
 
 [node name="Game Over" type="Label" parent="."]
-modulate = Color(0.74902, 0, 0, 1)
+modulate = Color(0.919281, 3.00817e-06, 7.70092e-07, 1)
 y_sort_enabled = true
 texture_filter = 1
 layout_mode = 0

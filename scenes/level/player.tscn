@@ -3,13 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://bxcosfecj6a0y" path="res://assets/player.png" id="1_25gjc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e54x4"]
-size = Vector2(128, 25)
+size = Vector2(125, 25)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(199, 606)
-scale = Vector2(2.5, 2)
+scale = Vector2(2.46, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.977, 1)
 texture = ExtResource("1_25gjc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

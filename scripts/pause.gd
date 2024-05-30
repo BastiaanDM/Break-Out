@@ -3,7 +3,7 @@ extends CanvasLayer
 signal unpause
 var can_leave = false
 
-func _process(delta):
+func _process(_delta):
 	if(can_leave):
 		if (Input.is_action_just_pressed("pause")):
 			emit_signal("unpause")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdfoi6bk04jn"]
+[gd_scene load_steps=4 format=3 uid="uid://cdfoi6bk04jn"]
 
 [ext_resource type="Texture2D" uid="uid://bx87qenfedrp0" path="res://assets/ball.png" id="1_xwtmj"]
+[ext_resource type="AudioStream" uid="uid://1q5hopqybqxq" path="res://assets/pumpkin_break_01.mp3" id="2_6beea"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt7i5"]
 
@@ -14,3 +15,6 @@ shape = SubResource("CircleShape2D_yt7i5")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_xwtmj")
+
+[node name="SoundEffect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_6beea")

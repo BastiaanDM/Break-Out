@@ -16,6 +16,7 @@ func _physics_process(delta):
 	if(physics):
 		var collision: KinematicCollision2D = move_and_collide(velocity * delta)
 		if collision:
+			$SoundEffect.play()
 			var reflect = collision.get_remainder().bounce(collision.get_normal())
 			velocity = velocity.bounce(collision.get_normal())
 			move_and_collide(reflect)	

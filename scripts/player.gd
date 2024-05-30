@@ -21,7 +21,7 @@ func _physics_process(delta):
 			emit_signal("pause")
 			physics = false
 
-func _on_ball_game_over(score):
+func _on_ball_game_over(_score):
 	global_position.x = 540
 	physics = false
 
