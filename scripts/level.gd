@@ -22,7 +22,6 @@ func _on_player_pause():
 
 
 
-
 func _on_pause_timer_timeout():
 	pause_timer.stop()
 
@@ -33,3 +32,8 @@ func _on_ball_game_over(_score):
 
 func _on_game_over_timer_timeout():
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+func _on_enemy_pause():
+	menu.show()
+	pause_timer.start()

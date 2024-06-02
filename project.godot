@@ -23,6 +23,10 @@ MusicController="*res://autoloads/MusicController.tscn"
 
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="Break Out"
+
 [input]
 
 pause={

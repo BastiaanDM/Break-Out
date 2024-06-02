@@ -22,7 +22,7 @@ func _physics_process(delta):
 			move_and_collide(reflect)	
 			if (collision.get_collider().get_class() == "CharacterBody2D"):
 				score += 1
-				velocity *= 1.07
+				velocity *= 1.05
 		if global_position.y > 650:
 			emit_signal("game_over", score)
 			queue_free()

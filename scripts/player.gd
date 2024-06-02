@@ -4,10 +4,6 @@ const speed = 50000.0
 var physics = true
 signal pause
 
-func _ready():
-	$CollisionShape2D.add_to_group("player")
-	
-
 func _physics_process(delta):
 	if (physics):
 		if Input.is_action_pressed("ui_left"):
