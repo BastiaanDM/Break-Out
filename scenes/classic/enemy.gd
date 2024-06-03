@@ -27,7 +27,7 @@ func _process(delta):
 	global_position.x = new_x
 	print(global_position.x)
 
-func _on_ball_game_over(_score):
+func _on_ball_game_over():
 	game_ended = true
 
 

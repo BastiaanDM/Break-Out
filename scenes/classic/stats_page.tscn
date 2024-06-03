@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://bedbtcchg5ql3"]
+
+[ext_resource type="Script" path="res://scenes/classic/stats_page.gd" id="1_8eoo7"]
+[ext_resource type="Texture2D" uid="uid://cjlu668hn00g7" path="res://assets/cool-background.png" id="1_c6wug"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hf6n3"]
+font_size = 100
+
+[sub_resource type="Theme" id="Theme_amvuw"]
+Button/font_sizes/font_size = 24
+
+[node name="stats_page" type="Node2D"]
+script = ExtResource("1_8eoo7")
+
+[node name="Cool-background" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(593, 323)
+scale = Vector2(1.12, 1.12)
+texture = ExtResource("1_c6wug")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -133.5
+offset_right = 133.5
+offset_bottom = 137.0
+grow_horizontal = 2
+text = "Stats"
+label_settings = SubResource("LabelSettings_hf6n3")
+
+[node name="ReturnButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -233.0
+offset_top = -81.0
+offset_right = -100.0
+offset_bottom = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_amvuw")
+text = "Return To Menu"
+
+[connection signal="pressed" from="CanvasLayer/ReturnButton" to="." method="_on_return_button_pressed"]

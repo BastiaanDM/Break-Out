@@ -5,6 +5,8 @@ var physics = true
 signal pause
 
 func _physics_process(delta):
+	if (global_position.y != 600):
+		global_position.y = 600
 	if (physics):
 		if Input.is_action_pressed("ui_left"):
 			velocity.x = -speed*delta
@@ -17,8 +19,8 @@ func _physics_process(delta):
 			emit_signal("pause")
 			physics = false
 
-func _on_ball_game_over(_score):
-	global_position.x = 540
+func _on_ball_game_over():
+	global_position.x = 576
 	physics = false
 
 

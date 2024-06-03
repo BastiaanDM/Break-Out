@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var menu =$PauseMenu
 @onready var pause_timer = $PauseTimer
-@onready var game_over_timer = $GameOverTimer
+@onready var victory_timer = $VictoryTimer
 
 var level_music = load("res://assets/leap.mp3")
 
@@ -26,8 +26,8 @@ func _on_pause_timer_timeout():
 	pause_timer.stop()
 
 
-func _on_ball_game_over(_score):
-	game_over_timer.start()
+func _on_ball_game_over():
+	victory_timer.start()
 
 
 func _on_game_over_timer_timeout():
@@ -37,3 +37,7 @@ func _on_game_over_timer_timeout():
 func _on_enemy_pause():
 	menu.show()
 	pause_timer.start()
+
+
+func _on_breakables_victory():
+	victory_timer.start()

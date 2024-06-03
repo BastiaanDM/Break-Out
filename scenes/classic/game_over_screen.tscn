@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://2utwosko6ko6"]
+[gd_scene load_steps=3 format=3 uid="uid://2utwosko6ko6"]
 
 [ext_resource type="Script" path="res://scripts/GameOverScreen.gd" id="1_raika"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vnvm1"]
+font_size = 60
 
 [node name="GameOverScreen" type="Control"]
 layout_mode = 3
@@ -9,23 +12,14 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_raika")
 
-[node name="Final score" type="Label" parent="."]
-layout_mode = 0
-offset_left = 448.0
-offset_top = 396.0
-offset_right = 586.0
-offset_bottom = 419.0
-scale = Vector2(2, 2)
-text = "Final Score : 0"
-
 [node name="Game Over" type="Label" parent="."]
 modulate = Color(0.919281, 3.00817e-06, 7.70092e-07, 1)
 y_sort_enabled = true
 texture_filter = 1
 layout_mode = 0
-offset_left = 346.0
-offset_top = 280.0
-offset_right = 433.0
-offset_bottom = 303.0
-scale = Vector2(5, 5)
+offset_left = 413.0
+offset_top = 342.0
+offset_right = 740.0
+offset_bottom = 425.0
 text = "Game Over"
+label_settings = SubResource("LabelSettings_vnvm1")

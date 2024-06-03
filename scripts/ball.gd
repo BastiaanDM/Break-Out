@@ -4,7 +4,6 @@ const starting_speed = -300.0
 var SPEED
 var degree = randf_range(-PI/4,PI/4)
 signal game_over
-var score = 0
 var physics = true
 
 # Called when the node enters the scene tree for the first time.
@@ -21,10 +20,11 @@ func _physics_process(delta):
 			velocity = velocity.bounce(collision.get_normal())
 			move_and_collide(reflect)	
 			if (collision.get_collider().get_class() == "CharacterBody2D"):
-				score += 1
-				velocity *= 1.05
+				velocity *= 1.04
+			if (collision.get_collider().get_class() == "StaticBody2D"):
+				get_tree().queue_delete(collision.get_collider())
 		if global_position.y > 650:
-			emit_signal("game_over", score)
+			emit_signal("game_over")
 			queue_free()
 
 
